@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Hover Effect Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        .common{
+            width: 280px;
+            height: 212px;
+            float: left;
+            
+        }
+        .box {
+            background-image: url('img/dog.jpg');
+            background-size: cover;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+            position: relative;
+            margin: 200px auto;
+            overflow: hidden;
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;
+            float: left;
+            margin: 12px;
+        }
+
+        .overlay{
+            
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: -212px;
+            left: 0px;
+        }
+        .overlay5{
+            top: 0px;
+            opacity: 0;
+            transition: all 0.1s linear;
+        }
+        .box:hover .overlay5{
+            opacity: 1;
+        }
+
+        .box:hover .overlay {
+            top: 0px;
+            transition: 1s;
+        }
+
+        .overlay>a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+            top:81px;
+            left: 80px;
+            color: #464646;
+        }
+        .banchor{
+            left: 140px !important;
+        }
+        .a5-1{
+            left: 50px !important;
+        }
+        .a5-2{
+            left:180px !important ;
+        }
+        .box:hover > .overlay5 .a5-1{
+            left: 90px !important;
+        }
+        .box:hover > .overlay5 .a5-2{
+            left: 145px !important;
+        }
+        .a5-1 .a5-2{
+            transition: all ;
+            transition-duration: 0.1s;
+            transition-timing-function:  linear ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="common box">
+        <div class="common overlay">
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+            <a href="#" class="banchor"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+    <div class="common box">
+        <div class="common overlay overlay5">
+            <a href="#" class="a5-1"><i class="fa-solid fa-link"></i></a>
+            <a href="#" class="banchor a5-2" ><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>
